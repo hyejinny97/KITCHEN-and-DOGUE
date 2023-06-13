@@ -1,0 +1,65 @@
+.Slider {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	&__container {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	&.sliding {
+		.Slider__list {
+			display: flex;
+			height: 100%;
+		}
+
+		.Slider__item {
+			flex: 0 0 100%;
+		}
+	}
+
+	&.no-sliding {
+		.Slider__list {
+			position: relative;
+			height: 100%;
+		}
+
+		.Slider__item {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: opacity 1s;
+
+			&.active {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__controller {
+		position: absolute;
+		top: 50%;
+		cursor: pointer;
+
+		&--prev {
+			left: 0;
+		}
+
+		&--next {
+			right: 0;
+		}
+	}
+
+	&__dot-list {
+		display: flex;
+		position: absolute;
+		left: 50%;
+		bottom: 1rem;
+		transform: translate(-50%, -50%);
+	}
+}
