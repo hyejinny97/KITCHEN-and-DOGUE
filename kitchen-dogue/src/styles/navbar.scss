@@ -19,6 +19,7 @@
 	&__icon {
 		font-weight: 900;
 		font-size: 1.2rem;
+		cursor: pointer;
 
 		&--burger {
 			grid-column: 1;
@@ -39,12 +40,6 @@
 	&__util-item {
 		&:not(:last-child) {
 			margin-right: 1rem;
-		}
-
-		& a:link,
-		& a:visited,
-		& a:active {
-			color: #444;
 		}
 	}
 

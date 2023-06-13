@@ -10,4 +10,10 @@ ul {
 
 a {
 	text-decoration: none;
+
+	&:link,
+	&:visited,
+	&:active {
+		color: #444;
+	}
 }
