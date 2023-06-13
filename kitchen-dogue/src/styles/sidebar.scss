@@ -1,0 +1,150 @@
+@import "./root.scss";
+$light-gray: rgba(128, 128, 128, 0.521);
+
+.Sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: $overlay;
+	z-index: 100;
+	overflow: hidden;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity visibility 1s;
+
+	&__container {
+		padding: 1.5rem 2rem;
+		width: 20rem;
+		height: 100%;
+		background-color: white;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		transform: translateX(-22rem);
+		transition: transform 1s;
+	}
+
+	&__icon--close {
+		position: absolute;
+		top: 1rem;
+		left: 21rem;
+		font-size: 2.5rem;
+		color: white;
+		cursor: pointer;
+		z-index: 200;
+		transform: translateX(-22rem);
+		transition: transform 1s;
+	}
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+
+		& .Sidebar__container {
+			transform: translateX(0rem);
+		}
+		& .Sidebar__icon--close {
+			transform: translateX(0rem);
+		}
+	}
+
+	&__userInfo {
+		display: grid;
+		grid-template-columns: 3fr 2fr 2fr;
+		align-items: center;
+		padding-bottom: 1rem;
+		font-size: 0.75rem;
+	}
+
+	&__userName {
+		color: gray;
+	}
+
+	&__signIn,
+	&__signUp {
+		justify-self: right;
+		padding: 0.2rem 0.5rem;
+		border: 1px solid $light-gray;
+		border-radius: 2px;
+		letter-spacing: -1px;
+	}
+
+	&__util-list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-items: center;
+		align-items: center;
+		padding: 1rem 0;
+		border-top: 1px solid #444;
+		border-bottom: 1px solid #444;
+		font-size: 0.75rem;
+	}
+
+	&__util-item {
+		text-align: center;
+
+		& svg {
+			font-size: 2rem;
+			color: $light-gray;
+		}
+	}
+
+	&__menu-list {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+	}
+
+	&__menu-item {
+		color: #999;
+		font-weight: 500;
+
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+
+		&:hover {
+			color: #222;
+		}
+	}
+
+	&__cs {
+		padding-top: 2rem;
+		color: #444;
+	}
+
+	&__cs-title,
+	&__cs-phone {
+		margin-bottom: 0.5rem;
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
+
+	&__cs-phone {
+		font-size: 2rem;
+	}
+
+	&__cs-time {
+		margin-bottom: 1rem;
+		line-height: 1.5rem;
+		font-size: 0.8rem;
+		color: #999;
+	}
+
+	&__cs-btn {
+		display: inline-block;
+		padding: 0.5rem;
+		width: 100%;
+		text-align: center;
+		background-color: #444;
+		color: white;
+		border-radius: 5px;
+
+		&:link,
+		&:visited,
+		&:active {
+			color: white;
+		}
+	}
+}

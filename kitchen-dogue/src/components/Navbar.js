@@ -1,25 +1,17 @@
+import '../styles/navbar.scss';
+import logo from '../assets/logo.png'
+import { useDispatch } from 'react-redux';
+import { sidebarOpen } from '../store';
+import { menus, utils } from '../data/navbar-data';
 import { NavLink } from 'react-router-dom';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { BsSearch } from "react-icons/bs";
-import '../styles/navbar.scss';
-import logo from '../assets/logo.png'
 
 function Navbar() {
-  const menus = [
-    { label: 'KITCHEN AND DOGUE', link: '/company' },
-    { label: 'JERKY', link: '/goods/catalog?category=jerky' },
-    { label: 'BAR', link: '/goods/catalog?category=bar' },
-    { label: 'PORRIDGE', link: '/goods/catalog?category=porridge' },
-  ];
-
-  const utils = [
-    { label: 'Login' },
-    { label: 'Join' },
-    { label: 'Cart' },
-    { label: 'MyPage' },
-    { label: 'CS Center' },
-
-  ]
+  const dispatch = useDispatch();
+  const handleOpen = function () {
+    dispatch(sidebarOpen());
+  }
 
   const renderMenus = menus.map(menu => {
     return <li className='Navbar__menu-item' key={menu.label}>
@@ -29,13 +21,13 @@ function Navbar() {
 
   const renderUtils = utils.map(util => {
     return <li className='Navbar__util-item' key={util.label}>
-      {util.label.toUpperCase()}
+      <NavLink to={util.link}>{util.label.toUpperCase()}</NavLink>
     </li>
   })
 
   return (
     <nav className='Navbar'>
-      <RxHamburgerMenu className='Navbar__icon Navbar__icon--burger' />
+      <RxHamburgerMenu className='Navbar__icon Navbar__icon--burger' onClick={handleOpen} />
       <ul className='Navbar__menu-list'>
         {renderMenus}
       </ul>
