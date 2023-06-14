@@ -1,7 +1,7 @@
 import '../styles/sidebar.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { sidebarClose } from '../store';
-import { utils, menus } from '../data/sidebar-data';
+import { utils, menus } from '../data/sidebarData';
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 

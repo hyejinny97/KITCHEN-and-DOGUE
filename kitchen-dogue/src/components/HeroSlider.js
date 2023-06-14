@@ -1,5 +1,5 @@
-import heroData from '../data/hero-slider-data';
-import '../styles/hero-slider.scss';
+import heroData from '../data/heroSliderData';
+import '../styles/heroSlider.scss';
 import Slider from './Slider';
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
