@@ -14,6 +14,15 @@
 
 -   KITCHEN and DOGUE 사이트 링크: <http://www.kitchendogue.com/main/index>
 
+### 1️⃣ Navbar
+
+> `화면 너비 > 992px`일 때
+> `화면 너비 <= 992px`일 때
+
+### 2️⃣ Sidebar
+
+### 3️⃣ HeroSlider
+
 ## 🎨 Flowchart & Structure
 
 ## 📁 참고자료

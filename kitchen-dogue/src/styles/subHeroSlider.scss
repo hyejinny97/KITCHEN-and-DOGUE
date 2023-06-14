@@ -1,0 +1,29 @@
+$dark-gray: rgba(66, 66, 66, 0.719);
+
+.SubHeroSlider {
+  margin: 2rem 0;
+  padding: 0 0.5rem;
+  width: 100%;
+  height: 13rem;
+
+  &__slide-image {
+    padding: 0 0.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    overflow: hidden;
+
+    // &:hover {
+    //   transform: scale(1.1);
+    // }
+  }
+
+  &__slide-controller {
+		position: inline-block;
+		padding: 0.2rem;
+		font-size: 3rem;
+		background-color: rgba(255, 255, 255, 0.548);
+		color: $dark-gray;
+	}
+}

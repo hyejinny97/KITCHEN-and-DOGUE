@@ -2,7 +2,7 @@ import '../styles/navbar.scss';
 import logo from '../assets/logo.png'
 import { useDispatch } from 'react-redux';
 import { sidebarOpen } from '../store';
-import { menus, utils } from '../data/navbar-data';
+import { menus, utils } from '../data/navbarData';
 import { NavLink } from 'react-router-dom';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { BsSearch } from "react-icons/bs";

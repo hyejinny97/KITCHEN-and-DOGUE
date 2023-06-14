@@ -44,6 +44,7 @@
 	&__controller {
 		position: absolute;
 		top: 50%;
+		transform: translateY(-50%);
 		cursor: pointer;
 
 		&--prev {

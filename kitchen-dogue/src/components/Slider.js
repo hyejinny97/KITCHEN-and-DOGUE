@@ -4,27 +4,29 @@ import { useState, useRef, useEffect } from "react";
 function Slider({
   data,
   config,
+  slidesPerPage = 1,
   transitionTime = 1,
   intervalTime = 3,
   sliding = false,
   infinite = false,
   auto = false,
 }) {
-  const firstSlide = infinite ? 1 : 0;
-  const lastSlide = infinite ? data.length : data.length - 1;
+  const notSliding = slidesPerPage === data.length;
+  const firstSlide = infinite & !notSliding ? 1 : 0;
+  const lastSlide = infinite & !notSliding ? data.length : data.length - 1;
   const [curSlide, setCurSlide] = useState(firstSlide);
+  const [slidesData, setSlidesData] = useState(data);
   const [isMoving, setIsMoving] = useState(false);
   const slideList = useRef();
-  const dotsList = useRef();
 
   useEffect(() => {
     if (sliding) {
-      slideList.current.style.transform = `translateX(-${100 * curSlide}%)`;
+      slideList.current.style.transform = `translateX(-${(100 / slidesPerPage) * curSlide}%)`;
     } else {
       slideList.current.childNodes.forEach(slide => slide.classList.remove('active'));
       slideList.current.childNodes[curSlide].classList.add('active');
     }
-  }, [curSlide]);
+  }, [curSlide, slidesPerPage]);
 
   useEffect(() => {
     if (auto) {
@@ -32,6 +34,15 @@ function Slider({
       return () => clearInterval(interval);
     }
   });
+  
+  useEffect(() => {
+    if (infinite & !notSliding) {
+      const addFirst = data.slice(data.length - slidesPerPage, data.length).map((d, i) => {return { ...d, id: `${d.id}/clone/${i}` }});
+      const addLast = data.slice(0, slidesPerPage).map((d, i) => {return { ...d, id: `${d.id}/clone/${i}` }});
+      const newData = [...addFirst, ...data, ...addLast];
+      setSlidesData(newData);
+    }
+  }, [slidesPerPage]);
 
   const moveToSlide = function (direction) {
     if (isMoving) return;
@@ -59,22 +70,33 @@ function Slider({
     }, transitionTime * 1000);
   };
 
-  let newData = data;
-  if (infinite) {
-    const addFirst = { ...data.at(-1), id: `${data.at(-1).id}/clone` };
-    const addLast = { ...data.at(0), id: `${data.at(0).id}/clone` };
-    newData = [addFirst, ...data, addLast];
-  }
-
-  let renderSlides = newData.map((item) => {
+  const renderSlides = slidesData.map((item) => {
     return (
-      <div key={item.id} className="Slider__item">
+      <div key={item.id} className="Slider__item" style={{flexBasis: `${100 / slidesPerPage}%`}}>
         {config.renderContent(item)}
       </div>
     );
   });
 
-  const renderDots = Array(data.length).fill(0).map((_, i) => {
+  const renderControllers = !notSliding && [
+    <div
+      key='prev'
+      className="Slider__controller Slider__controller--prev"
+      onClick={() => moveToSlide("prev")}
+      style={config.controllerPrev?.style}
+    >
+      {config.controllerPrev?.render()}
+    </div>,
+    <div
+      key='next'
+      className="Slider__controller Slider__controller--next"
+      onClick={() => moveToSlide("next")}
+      style={config.controllerNext?.style}
+    >
+      {config.controllerNext?.render()}
+    </div>];
+
+  const renderDots = config.dots && Array(data.length).fill(0).map((_, i) => {
     if (i === curSlide) {
       return (
         <div key={i} className='Slider__dot-item' onClick={() => setCurSlide(i)}>
@@ -97,21 +119,8 @@ function Slider({
           {renderSlides}
         </div>
       </div>
-      <div
-        className="Slider__controller Slider__controller--prev"
-        onClick={() => moveToSlide("prev")}
-        style={config.controllerPrev.style}
-      >
-        {config.controllerPrev.render()}
-      </div>
-      <div
-        className="Slider__controller Slider__controller--next"
-        onClick={() => moveToSlide("next")}
-        style={config.controllerNext.style}
-      >
-        {config.controllerNext.render()}
-      </div>
-      <div className='Slider__dot-list' ref={dotsList}>
+      {renderControllers}
+      <div className='Slider__dot-list'>
         {renderDots}
       </div>
     </div>
