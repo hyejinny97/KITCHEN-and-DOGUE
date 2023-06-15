@@ -22,10 +22,18 @@ const menusApi = createApi({
             method: 'GET'
           }
         }
+      }),
+      fetchSpecialMenu: builder.query({
+        query: () => {
+          return {
+            url: '/specialMenu',
+            method: 'GET'
+          }
+        }
       })
     }
   }
 })
 
 export { menusApi };
-export const { useFetchSignatureMenuQuery, useFetchDailyMenuQuery } = menusApi;
+export const { useFetchSignatureMenuQuery, useFetchDailyMenuQuery, useFetchSpecialMenuQuery } = menusApi;

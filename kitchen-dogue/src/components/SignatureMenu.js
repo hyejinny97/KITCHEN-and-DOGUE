@@ -9,7 +9,6 @@ function SignatureMenu() {
   else if (isError) return 'error...';
 
   const renderItems = data.map(item => {
-    console.log(item)
     return <HomeMenuItem className='SignatureMenu__item' key={item.id} data={item} />
   });
 

@@ -9,7 +9,6 @@ function DailyMenu() {
   else if (isError) return 'error...';
 
   const renderItems = data.map(item => {
-    console.log(item)
     return <DailyMenuItem key={item.id} data={item} />;
   });
 

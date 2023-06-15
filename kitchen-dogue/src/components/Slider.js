@@ -8,12 +8,13 @@ function Slider({
   transitionTime = 1,
   intervalTime = 3,
   sliding = false,
+  ending = false,
   infinite = false,
   auto = false,
 }) {
   const notSliding = slidesPerPage === data.length;
   const firstSlide = infinite & !notSliding ? 1 : 0;
-  const lastSlide = infinite & !notSliding ? data.length : data.length - 1;
+  const lastSlide = infinite & !notSliding ? data.length : ending ? data.length - slidesPerPage : data.length - 1;
   const [curSlide, setCurSlide] = useState(firstSlide);
   const [slidesData, setSlidesData] = useState(data);
   const [isMoving, setIsMoving] = useState(false);
@@ -34,11 +35,11 @@ function Slider({
       return () => clearInterval(interval);
     }
   });
-  
+
   useEffect(() => {
     if (infinite & !notSliding) {
-      const addFirst = data.slice(data.length - slidesPerPage, data.length).map((d, i) => {return { ...d, id: `${d.id}/clone/${i}` }});
-      const addLast = data.slice(0, slidesPerPage).map((d, i) => {return { ...d, id: `${d.id}/clone/${i}` }});
+      const addFirst = data.slice(data.length - slidesPerPage, data.length).map((d, i) => { return { ...d, id: `${d.id}/clone/${i}` } });
+      const addLast = data.slice(0, slidesPerPage).map((d, i) => { return { ...d, id: `${d.id}/clone/${i}` } });
       const newData = [...addFirst, ...data, ...addLast];
       setSlidesData(newData);
     }
@@ -59,7 +60,7 @@ function Slider({
         setCurSlide(initSlide);
       }, transitionTime * 1000);
     } else if (curSlide === limitSlide) {
-      setCurSlide(initSlide);
+      !ending && setCurSlide(initSlide);
     } else {
       slideList.current.style.transition = `${transitionTime}s all ease`;
       setCurSlide(slideToGo);
@@ -72,7 +73,7 @@ function Slider({
 
   const renderSlides = slidesData.map((item) => {
     return (
-      <div key={item.id} className="Slider__item" style={{flexBasis: `${100 / slidesPerPage}%`}}>
+      <div key={item.id} className="Slider__item" style={{ flexBasis: `${100 / slidesPerPage}%` }}>
         {config.renderContent(item)}
       </div>
     );
@@ -85,7 +86,7 @@ function Slider({
       onClick={() => moveToSlide("prev")}
       style={config.controllerPrev?.style}
     >
-      {config.controllerPrev?.render()}
+      {ending && curSlide === firstSlide ? config.controllerPrev?.renderInactive() : config.controllerPrev?.render()}
     </div>,
     <div
       key='next'
@@ -93,7 +94,7 @@ function Slider({
       onClick={() => moveToSlide("next")}
       style={config.controllerNext?.style}
     >
-      {config.controllerNext?.render()}
+      {ending && curSlide === lastSlide ? config.controllerNext?.renderInactive() : config.controllerNext?.render()}
     </div>];
 
   const renderDots = config.dots && Array(data.length).fill(0).map((_, i) => {
