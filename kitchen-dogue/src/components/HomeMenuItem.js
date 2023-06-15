@@ -5,7 +5,9 @@ function HomeMenuItem({ data }) {
   return (
     <div className='HomeMenuItem'>
       <Link to='/'>
-        <img className='HomeMenuItem__image' src={data.image} alt={data.name} />
+        <div className='HomeMenuItem__image-wrap'>
+          <img className='HomeMenuItem__image' src={data.image} alt={data.name} />
+        </div>
         <h5 className='HomeMenuItem__name'>{data.name}</h5>
       </Link>
       <p className='HomeMenuItem__price'>

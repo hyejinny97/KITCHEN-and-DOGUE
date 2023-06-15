@@ -1,6 +1,8 @@
+@import "./root.scss";
+
 .FixedBanner {
 	width: 100%;
-	height: 17rem;
+	height: 20rem;
 	background-image: url("http://www.kitchendogue.com/data/skin/responsive_food_wellbeing_gl/images/design_resp/full_bg33.jpg");
 	background-attachment: fixed;
 	background-size: cover;
@@ -16,7 +18,7 @@
 
 	&__content {
 		letter-spacing: -2px;
-		font-size: 2.5rem;
+		font-size: 3.5rem;
 
 		&--fst {
 			font-weight: 500;
@@ -32,6 +34,12 @@
 
 		&--bold {
 			font-weight: 700;
+		}
+
+		@media screen and (max-width: $large) {
+			& {
+				font-size: 2.5rem;
+			}
 		}
 	}
 }

@@ -65,5 +65,42 @@
       "image": "http://www.kitchendogue.com/data/goods/1/2020/12/61_tmp_e88d57a5b18e40324631d6e3661a5b328560view.jpg",
       "desc": "씨푸드 영양바"
     }
+  ],
+  "specialMenu": [
+    {
+      "id": 9,
+      "name": "연어와 고구마 죽",
+      "price": 12000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/70_tmp_4c4b0efa9262d29a8477ba840cdc45683046view.jpg",
+      "desc": "소화에 도움이 되는 연어 고구마 죽"
+    },
+    {
+      "id": 10,
+      "name": "소고기와 채소 죽",
+      "price": 12000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/65_tmp_c40eca745576d19810f2dcc6e084913f1023view.jpg",
+      "desc": "녹황색 채소와 소고기를 넣은 죽"
+    },
+    {
+      "id": 11,
+      "name": "닭고기와 채소 죽",
+      "price": 11000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/63_tmp_8fb5b294a549bea2d271987f1f2b67875595view.jpg",
+      "desc": "건강에 도움이 되는 순살 닭고기 죽"
+    },
+    {
+      "id": 12,
+      "name": "소고기와 단호박 죽",
+      "price": 12000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/71_tmp_bd155b386a81b812ead55a1898f5f4058484view.jpg",
+      "desc": "소고기와 단호박 죽"
+    },
+    {
+      "id": 13,
+      "name": "오리고기와 황태 죽",
+      "price": 11000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/68_tmp_38318892456e659bafcb6dfc17d6f5633788view.jpg",
+      "desc": "오리 안심을 넣은 영양죽"
+    }
   ]
 }

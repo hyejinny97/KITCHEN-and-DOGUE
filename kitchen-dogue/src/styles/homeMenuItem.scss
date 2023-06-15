@@ -2,14 +2,25 @@ $light-gray: rgba(128, 128, 128, 0.418);
 $dark-gray: rgba(128, 128, 128, 0.644);
 
 .HomeMenuItem {
-	display: flex;
-	flex-direction: column;
-	justify-content: start;
-	align-items: start;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: start;
+	// align-items: start;
+	margin: 0 auto;
 	letter-spacing: -1px;
 	word-spacing: -2px;
 
+	& a {
+		display: block;
+	}
+
+	&__image-wrap {
+		width: 100%;
+		overflow: hidden;
+	}
+
 	&__image {
+		display: block;
 		width: 100%;
 	}
 
@@ -44,6 +55,7 @@ $dark-gray: rgba(128, 128, 128, 0.644);
 
 	&:hover {
 		.HomeMenuItem__image {
+			transition: transform 0.3s;
 			transform: scale(1.05);
 			filter: opacity(50%);
 		}
