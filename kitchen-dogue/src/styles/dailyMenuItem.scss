@@ -14,12 +14,16 @@ $dark-gray: rgba(128, 128, 128, 0.774);
 		display: grid;
 		grid-template-rows: 1fr 1fr;
 		grid-template-columns: 2fr 1fr;
+		align-items: center;
 		position: absolute;
 		left: 0;
 		bottom: 0;
 		padding: 1rem;
 		width: 100%;
 		background-color: $low-opacity-white;
+		// white-space: nowrap;
+		// overflow: hidden;
+		// text-overflow: ellipsis;
 	}
 
 	&__desc {
@@ -30,18 +34,25 @@ $dark-gray: rgba(128, 128, 128, 0.774);
 		font-size: 0.9rem;
 		font-weight: 700;
 		color: black;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	&__name {
 		grid-row: 2;
 		grid-column: 1;
 		color: $dark-gray;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	&__price {
 		grid-row: 2;
 		grid-column: 2;
 		justify-self: end;
+		min-width: 5rem;
 		font-weight: 700;
 		font-size: 1.2rem;
 	}

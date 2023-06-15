@@ -4,8 +4,8 @@ $dark-gray: rgba(128, 128, 128, 0.644);
 .HomeMenuItem {
 	display: flex;
 	flex-direction: column;
+	justify-content: start;
 	align-items: start;
-	justify-content: center;
 	letter-spacing: -1px;
 	word-spacing: -2px;
 
