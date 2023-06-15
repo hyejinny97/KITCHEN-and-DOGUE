@@ -1,6 +1,6 @@
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import {Link} from 'react-router-dom';
-import {useEffect, useState} from 'react'
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react'
 import '../styles/subHeroSlider.scss';
 import subHeroSliderData from '../data/subHeroSliderData'
 import Slider from './Slider';
@@ -32,11 +32,11 @@ function SubHeroSlider() {
     },
     controllerPrev: {
       render: () => {
-          return (
-            <IoIosArrowBack className="SubHeroSlider__slide-controller SubHeroSlider__slide-controller--prev" />
-          )
+        return (
+          <IoIosArrowBack className="SubHeroSlider__slide-controller SubHeroSlider__slide-controller--prev" />
+        )
       },
-      style: { left: '1rem' }
+      style: { left: '0.5rem' }
     },
     controllerNext: {
       render: () => {
@@ -44,13 +44,13 @@ function SubHeroSlider() {
           <IoIosArrowForward className="SubHeroSlider__slide-controller SubHeroSlider__slide-controller--next" />
         );
       },
-      style: { right: '1rem' }
+      style: { right: '0.5rem' }
     },
   }
 
   return <div className='SubHeroSlider'>
-    <Slider data={data} config={config} slidesPerPage={slidesPerPage} sliding infinite/>
-    </div>
+    <Slider data={data} config={config} slidesPerPage={slidesPerPage} sliding infinite />
+  </div>
 }
 
 export default SubHeroSlider;
