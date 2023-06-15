@@ -1,0 +1,69 @@
+{
+  "signatureMenu": [
+    {
+      "id": 0,
+      "name": "한우와 야채 저키",
+      "price": 21000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2017/08/18_tmp_97d6892417936e65e23883553015ee403635view.jpg",
+      "desc": "영양이 필요한 성장기 강아지 추천"
+    },
+    {
+      "id": 1,
+      "name": "닭가슴살과 고구마 저키",
+      "price": 18000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2019/04/22_tmp_93c2c5dc19038dd8fa40acd586a3385a5073view.jpg",
+      "desc": "소화 능력이 떨어지는 노령견 추천"
+    },
+    {
+      "id": 2,
+      "name": "오리와 야채믹스 저키",
+      "price": 18000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2019/06/30_tmp_1b52da23f8652d27a2d95c229ef8c4c45175view.jpg",
+      "desc": "민감한 피부, 알레르기 체질 반려견 추천"
+    },
+    {
+      "id": 3,
+      "name": "오리와 황태 저키",
+      "price": 18000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2019/06/29_tmp_57b4e3a6d9cc26af11fca77c41fa669c4359view.jpg",
+      "desc": "콜레스테롤 수치가 높아 걱정이라면"
+    },
+    {
+      "id": 4,
+      "name": "닭가슴살 육포",
+      "price": 18000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2019/06/23_tmp_d552193dd1cdd4d2952c9ec5238c7ec77150view.jpg",
+      "desc": "소화 능력이 떨어지는 노령견 추천"
+    },
+    {
+      "id": 5,
+      "name": "오리와 고구마 저키",
+      "price": 18000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2019/06/28_tmp_b3125b655516854508aa65c53ad9cffe3350view.jpg",
+      "desc": "민감한 피부, 알레르기 체질 반려견 추천"
+    }
+  ],
+  "dailyMenu": [
+    {
+      "id": 6,
+      "name": "오리와 채소 영양바",
+      "price": 11000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/57_tmp_ce86b53fcce8a55f3ee6c3a04b72375a8348view.jpg",
+      "desc": "오리고기를 곁들인 펫 뉴트리바"
+    },
+    {
+      "id": 7,
+      "name": "닭가슴살과 채소 영양바",
+      "price": 11000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/58_tmp_8337664340796e7b8abf5071255b2fc74508view.jpg",
+      "desc": "닭고기를 곁들인 펫 뉴트리바"
+    },
+    {
+      "id": 8,
+      "name": "연어랑 바지락 영양바",
+      "price": 13000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/61_tmp_e88d57a5b18e40324631d6e3661a5b328560view.jpg",
+      "desc": "씨푸드 영양바"
+    }
+  ]
+}

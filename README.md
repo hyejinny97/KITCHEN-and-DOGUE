@@ -14,6 +14,9 @@
 
 -   KITCHEN and DOGUE 사이트 링크: <http://www.kitchendogue.com/main/index>
 
+-   참고1) Navbar와 Sidebar에서 'KITCHEN AND DOGUE', 'JERKY', 'BAR', 'PORRIDGE' 외 다른 링크들은 home page로 이동하게 했음
+-   참고2) 'JERKY' 페이지 첫번째 상품 외 다른 상품들 링크는 home page로 이동하게 했음
+
 ### 1️⃣ Navbar
 
 > `화면 너비 > 992px`일 때
