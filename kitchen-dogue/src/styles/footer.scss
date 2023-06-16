@@ -1,0 +1,30 @@
+$light-gray: rgba(128, 128, 128, 0.171);
+
+.Footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	margin-top: 5rem;
+	padding: 2rem 2.5rem;
+	border-top: 1px solid $light-gray;
+	color: #6d6d6dc0;
+
+	& ul {
+		margin-bottom: 1.5rem;
+	}
+
+	&__title {
+		margin-bottom: 1rem;
+		font-weight: 700;
+	}
+
+	&__text {
+		font-size: 0.9rem;
+		line-height: 1.5rem;
+	}
+
+	&__phone {
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
+}
