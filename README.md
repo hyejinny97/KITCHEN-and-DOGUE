@@ -28,6 +28,11 @@
 
 ## 🎨 Flowchart & Structure
 
+## 💥 이슈 및 해결과정
+
+Slider component 하나로 다양한 기능을 가진 슬라이드를 구현하려다 보니, Slider component 내 코드가 100줄이 넘어갈 정도로 매우 heavy해졌다.
+여러 슬라이드에 공통으로 존재하는 기능과 독립적으로 존재하는 기능을 구분하여, 공통으로 존재하는 기능은 Slider component에 넣고 반면 독립적으로 존재하는 기능은 상위 component(OverrideSlider, EndedSlider, InfiniteSlider)를 따로 각각 만들어주는 것이 좋겠다고 생각이 들었다.
+
 ## 📁 참고자료
 
 -   [React Router](https://reactrouter.com/en/main)
