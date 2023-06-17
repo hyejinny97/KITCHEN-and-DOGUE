@@ -4,13 +4,13 @@ function Footer() {
   const infoData = ['회사소개', '이용약관', '개인정보처리방침', '이용안내', '제휴안내'];
 
   return <footer className='Footer'>
-    <ul>
+    <ul className='Footer__content'>
       <li className='Footer__title'>INFORMATION</li>
       {infoData.map((data, i) => {
         return <li key={i} className='Footer__text'>{data}</li>
       })}
     </ul>
-    <ul>
+    <ul className='Footer__content'>
       <li className='Footer__title'>CUSTOMER CENTER</li>
       <li className='Footer__phone'>010-4311-4433</li>
       <li className='Footer__text'>
@@ -23,14 +23,14 @@ function Footer() {
         주말 및 공휴일은 휴무입니다.
       </li>
     </ul>
-    <ul>
+    <ul className='Footer__content'>
       <li className='Footer__title'>BANKING INFO</li>
       <li className='Footer__phone'>217-092309-04-010</li>
       <li className='Footer__text'>
         기업은행 <span className='Footer__text--gray'>예금주: 주식회사 페치</span>
       </li>
     </ul>
-    <div>
+    <div className='Footer__content'>
       <ul>
         <li className='Footer__title'>DELIVERY INQUIRY</li>
         <li className='Footer__text'>
