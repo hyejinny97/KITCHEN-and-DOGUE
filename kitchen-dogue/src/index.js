@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './styles/init.scss';
 import Root from './pages/Root';
 import Home from './pages/Home';
+import Company from './pages/Company';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />
+      },
+      {
+        path: 'company',
+        element: <Company />
       }
     ]
   }
