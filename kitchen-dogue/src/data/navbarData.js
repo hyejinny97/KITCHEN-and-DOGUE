@@ -1,8 +1,8 @@
 const menus = [
   { label: 'KITCHEN AND DOGUE', link: '/company' },
-  { label: 'JERKY', link: '/goods/catalog?category=jerky' },
-  { label: 'BAR', link: '/goods/catalog?category=bar' },
-  { label: 'PORRIDGE', link: '/goods/catalog?category=porridge' },
+  { label: 'JERKY', link: '/goods/catalog?category=jerky&sorting=ranking' },
+  { label: 'BAR', link: '/goods/catalog?category=bar&sorting=ranking' },
+  { label: 'PORRIDGE', link: '/goods/catalog?category=porridge&sorting=ranking' },
 ];
 
 const utils = [

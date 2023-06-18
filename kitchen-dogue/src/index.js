@@ -7,6 +7,7 @@ import './styles/init.scss';
 import Root from './pages/Root';
 import Home from './pages/Home';
 import Company from './pages/Company';
+import Goods, { loader as goodsLoader } from './pages/Goods';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
       {
         path: 'company',
         element: <Company />
+      },
+      {
+        path: 'goods/catalog',
+        loader: goodsLoader,
+        element: <Goods />
       }
     ]
   }

@@ -30,10 +30,18 @@ const menusApi = createApi({
             method: 'GET'
           }
         }
+      }),
+      fetchGoods: builder.query({
+        query: (goodsName) => {
+          return {
+            url: `/${goodsName}`,
+            method: 'GET'
+          }
+        }
       })
     }
   }
 })
 
 export { menusApi };
-export const { useFetchSignatureMenuQuery, useFetchDailyMenuQuery, useFetchSpecialMenuQuery } = menusApi;
+export const { useFetchSignatureMenuQuery, useFetchDailyMenuQuery, useFetchSpecialMenuQuery, useFetchGoodsQuery } = menusApi;
