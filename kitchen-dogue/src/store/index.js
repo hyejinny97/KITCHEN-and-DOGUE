@@ -17,4 +17,4 @@ setupListeners(store.dispatch);
 
 export { store };
 export { sidebarOpen, sidebarClose } from './slices/sidebarSlice';
-export { useFetchSignatureMenuQuery, useFetchDailyMenuQuery, useFetchSpecialMenuQuery } from './apis/menusApi';
+export { menusApi, useFetchSignatureMenuQuery, useFetchDailyMenuQuery, useFetchSpecialMenuQuery, useFetchGoodsQuery } from './apis/menusApi';

@@ -10,9 +10,9 @@ const utils = [
 
 const menus = [
   { label: 'about', link: '/company' },
-  { label: 'JERKY', link: '/goods/catalog?category=jerky' },
-  { label: 'NUTRIBAR', link: '/goods/catalog?category=bar' },
-  { label: 'PORRIDGE', link: '/goods/catalog?category=porridge' },
+  { label: 'JERKY', link: '/goods/catalog?category=jerky&sorting=ranking' },
+  { label: 'NUTRIBAR', link: '/goods/catalog?category=bar&sorting=ranking' },
+  { label: 'PORRIDGE', link: '/goods/catalog?category=porridge&sorting=ranking' },
   { label: 'COOKIE', link: '/' },
   { label: 'LIFEANDDOGUE', link: '/' },
   { label: 'new', link: '/' },

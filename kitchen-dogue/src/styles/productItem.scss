@@ -1,0 +1,30 @@
+.ProductItem {
+	word-spacing: -2px;
+	letter-spacing: -1px;
+
+	&__image {
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__name {
+		padding: 0.5rem 0;
+		font-size: 0.9rem;
+	}
+
+	&__desc {
+		padding-bottom: 0.5rem;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: gray;
+	}
+
+	&__price {
+		font-weight: 600;
+	}
+
+	&__unit {
+		font-size: 0.8rem;
+		font-weight: 400;
+	}
+}

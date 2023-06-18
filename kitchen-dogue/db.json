@@ -102,5 +102,137 @@
       "image": "http://www.kitchendogue.com/data/goods/1/2020/12/68_tmp_38318892456e659bafcb6dfc17d6f5633788view.jpg",
       "desc": "오리 안심을 넣은 영양죽"
     }
+  ],
+  "jerky": [
+    {
+      "id": 0,
+      "name": "한우와 고구마 저키",
+      "price": 21000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2017/08/20_tmp_f2b131a8544d5276d38e04f5c0e9cfdb2859list1.jpg",
+      "desc": "영양이 필요한 성장기 강아지 추천"
+    },
+    {
+      "id": 1,
+      "name": "오리와 고구마 저키",
+      "price": 18000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2019/06/28_tmp_b3125b655516854508aa65c53ad9cffe3350list1.jpg",
+      "desc": "민감한 피부, 알레르기 체질 반려견 추천"
+    },
+    {
+      "id": 2,
+      "name": "연어와 고구마 저키",
+      "price": 18000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2017/08/16_tmp_a67ab92435e55160d1f3b7db23f281d93941list1.jpg",
+      "desc": "민감한 피부, 알레르기 체질 반려견 추천"
+    },
+    {
+      "id": 3,
+      "name": "닭가슴살과 고구마 저키",
+      "price": 18000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2019/04/22_tmp_93c2c5dc19038dd8fa40acd586a3385a5073list1.jpg",
+      "desc": "소화 능력이 떨어지는 노령견 추천"
+    },
+    {
+      "id": 4,
+      "name": "오리와 야채믹스 저키",
+      "price": 18000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2019/06/30_tmp_1b52da23f8652d27a2d95c229ef8c4c45175list1.jpg",
+      "desc": "민감한 피부, 알레르기 체질 반려견 추천"
+    },
+    {
+      "id": 5,
+      "name": "명태껍데기와 바나나 저키",
+      "price": 23000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2019/06/26_tmp_b9b54ca7c208e771ad3a52fb6fe3ebeb8294list1.jpg",
+      "desc": "다이어트 간식이 필요한 반려견 추천"
+    }
+  ],
+  "bar": [
+    {
+      "id": 6,
+      "name": "비타민C와 식이섬유가 들어간 영양바",
+      "price": 12000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/62_tmp_7954cb7907e5a279045fd64c0eedf1d61425list1.jpg",
+      "desc": "연어와 채소 영양바"
+    },
+    {
+      "id": 7,
+      "name": "씨푸드 영양바",
+      "price": 13000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/61_tmp_e88d57a5b18e40324631d6e3661a5b328560list1.jpg",
+      "desc": "연어와 바지락 영양바"
+    },
+    {
+      "id": 8,
+      "name": "오메가3가 들어간 영양바",
+      "price": 12000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/59_tmp_bc1d12a7ac627fec9e4a5bab7904fe270027list1.jpg",
+      "desc": "연어와 고등어 영양바"
+    },
+    {
+      "id": 9,
+      "name": "닭고기를 곁들인 펫 뉴트리바",
+      "price": 11000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/58_tmp_8337664340796e7b8abf5071255b2fc74508list1.jpg",
+      "desc": "닭가슴살과 채소 영양바"
+    },
+    {
+      "id": 10,
+      "name": "오리고기를 곁들인 펫 뉴트리바",
+      "price": 11000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/57_tmp_ce86b53fcce8a55f3ee6c3a04b72375a8348list1.jpg",
+      "desc": "오리와 채소 영양바"
+    },
+    {
+      "id": 11,
+      "name": "연어를 곁들인 펫 뉴트리바",
+      "price": 12000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/56_tmp_162faf09f67d3636daa9d4e8484febed8246list1.jpg",
+      "desc": "연어와 채소 영양바"
+    }
+  ],
+  "porridge": [
+    {
+      "id": 12,
+      "name": "소고기 단호박 죽",
+      "price": 12000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/71_tmp_bd155b386a81b812ead55a1898f5f4058484list1.jpg",
+      "desc": "소고기와 단호박 죽"
+    },
+    {
+      "id": 13,
+      "name": "소화에 도움이 되는 연어 고구마 죽",
+      "price": 12000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/70_tmp_4c4b0efa9262d29a8477ba840cdc45683046list1.jpg",
+      "desc": "연어와 고구마 죽"
+    },
+    {
+      "id": 14,
+      "name": "닭고기 단호박 죽",
+      "price": 11000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/69_tmp_ec2f05dcce0a5ecfeeebd6eb6197f8027278list1.jpg",
+      "desc": "닭고기와 단호박 죽"
+    },
+    {
+      "id": 15,
+      "name": "오리 안심을 넣은 영양죽",
+      "price": 11000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/68_tmp_38318892456e659bafcb6dfc17d6f5633788list1.jpg",
+      "desc": "오리고기와 황태 죽"
+    },
+    {
+      "id": 16,
+      "name": "닭고기 고구마 죽",
+      "price": 11000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/67_tmp_a8a1a2308f91784305b000092581bc225133list1.jpg",
+      "desc": "닭고기와 고구마 죽"
+    },
+    {
+      "id": 17,
+      "name": "녹황색 채소와 소고기를 넣은 죽",
+      "price": 12000,
+      "image": "http://www.kitchendogue.com/data/goods/1/2020/12/65_tmp_c40eca745576d19810f2dcc6e084913f1023list1.jpg",
+      "desc": "소고기와 채소 죽"
+    }
   ]
 }
