@@ -1,4 +1,6 @@
 @import "root.scss";
+$light-gray: rgba(128, 128, 128, 0.205);
+$dark-gray: rgba(128, 128, 128, 0.562);
 
 .Goods {
 	width: 100%;
@@ -11,9 +13,154 @@
 		object-fit: cover;
 	}
 
+	&__breadcrumb {
+		padding: 1rem 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 10rem;
+	}
+
+	&__icon--home {
+		font-size: 1.5rem;
+	}
+
+	&__icon--greater {
+		font-size: 0.8rem;
+	}
+
+	&__form select {
+		padding: 0.3rem 0.5rem;
+		border: 1px solid $light-gray;
+		border-radius: 2px;
+		font-size: 0.8rem;
+		text-align: left;
+		outline: none;
+		cursor: pointer;
+
+		&:hover {
+			border: 1px solid $dark-gray;
+		}
+	}
+
+	&__arrange {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1rem;
+		border: 1px solid $light-gray;
+	}
+
+	&__arrange-left {
+		display: flex;
+		align-items: center;
+		height: 40px;
+	}
+
+	&__data-length {
+		padding: 0 1rem;
+		height: 100%;
+		line-height: 40px;
+		font-size: 1.2rem;
+		font-weight: 700;
+		border-right: 1px solid $light-gray;
+	}
+
+	&__data-length--unit {
+		font-size: 0.6rem;
+		font-weight: 400;
+	}
+
+	&__sorting-list {
+		display: flex;
+		align-items: center;
+		height: 100%;
+
+		& li {
+			display: inline-block;
+			padding: 0 1rem;
+			height: 100%;
+			line-height: 40px;
+			border-right: 1px solid $light-gray;
+			font-size: 0.8rem;
+			color: $dark-gray;
+			cursor: pointer;
+
+			&.active {
+				color: black;
+				font-weight: 700;
+			}
+		}
+	}
+
+	&__arrange-right {
+		display: flex;
+		align-items: center;
+	}
+
+	&__form--sorting {
+		display: none;
+	}
+
+	&__display {
+		display: flex;
+
+		& input[type="radio"] {
+			display: none;
+		}
+
+		& label {
+			display: block;
+			width: 40px;
+			height: 40px;
+			background-repeat: no-repeat;
+			background-position: center center;
+			border: 1px solid $light-gray;
+			cursor: pointer;
+		}
+
+		& label[for="lattice"] {
+			background-image: url("http://www.kitchendogue.com/data/skin/responsive_food_wellbeing_gl/images/common/icon_sort_a3_on.png");
+		}
+
+		& label[for="list"] {
+			background-image: url("http://www.kitchendogue.com/data/skin/responsive_food_wellbeing_gl/images/common/icon_sort_b3.png");
+		}
+
+		@for $i from 1 through 2 {
+			& input:nth-of-type(#{$i}):checked ~ label:nth-of-type(#{$i}) {
+				border: 1px solid black;
+			}
+		}
+	}
+
 	@media screen and (max-width: $large) {
 		& {
 			padding: 1rem;
+		}
+
+		&__arrange {
+			padding-bottom: 0.5rem;
+			border: none;
+			border-bottom: 1px solid $light-gray;
+		}
+
+		&__data-length {
+			padding: 0;
+			border-right: none;
+		}
+
+		&__sorting-list {
+			display: none;
+		}
+
+		&__form--sorting {
+			display: block;
+		}
+
+		& label {
+			width: 28.59px;
+			height: 28.59px;
 		}
 	}
 }
