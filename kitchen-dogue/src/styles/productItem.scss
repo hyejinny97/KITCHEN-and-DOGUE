@@ -1,4 +1,7 @@
+@import "root.scss";
+
 .ProductItem {
+	margin: 0 auto;
 	word-spacing: -2px;
 	letter-spacing: -1px;
 
@@ -26,5 +29,20 @@
 	&__unit {
 		font-size: 0.8rem;
 		font-weight: 400;
+	}
+
+	&--list {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		grid-gap: 0.5rem 1rem;
+		align-items: start;
+
+		.ProductItem__content {
+			padding-top: 1rem;
+		}
+
+		@media screen and (max-width: $small) {
+			border-bottom: 1px solid rgba(128, 128, 128, 0.253);
+		}
 	}
 }
