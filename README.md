@@ -27,9 +27,6 @@
 
 ![](./gif/Kitchen-and-Dogue__homePage--large.gif)
 
-> `화면 너비 <= 576px` 일 때
-
-![](./gif/Kitchen-and-Dogue__homePage--small.gif)
 
 ### 2️⃣ Company 페이지
 
