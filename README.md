@@ -9,13 +9,14 @@
 -   **Redux-Toolkit Query** 모듈을 사용해 서버와 통신하는 법을 익히자
 -   **React-Router** 라이브러리를 사용해 SPA(Single Page Application)을 구현하자
 -   **Responsive** Application을 구현하자
+-   React Project와 JSON Server를 **배포**하자
 
 ## 🧩 실습 결과물
 
 > 참고) Navbar와 Sidebar에서 'KITCHEN AND DOGUE', 'JERKY', 'BAR', 'PORRIDGE' 외 다른 링크들은 home page로 이동하게 했음
 
--   배포 사이트: <>
--   KITCHEN and DOGUE 사이트 링크: <http://www.kitchendogue.com/main/index>
+-   배포 사이트: <https://kitchen-and-dogue.vercel.app/>
+-   실제 KITCHEN and DOGUE 사이트 링크: <http://www.kitchendogue.com/main/index>
 
 ### 1️⃣ Home 페이지
 
@@ -26,7 +27,6 @@
 > `576px < 화면 너비 <= 992px` 일 때
 
 ![](./gif/Kitchen-and-Dogue__homePage--large.gif)
-
 
 ### 2️⃣ Company 페이지
 
@@ -246,6 +246,8 @@ React-Router에 loading/error와 관련된 기능이 있어 이를 이용하면 
 ### 5️⃣ React project와 JSON Server 배포
 
 현재 kitchen-dogue 폴더는 CRA에 의해 생성된 React project이고, 이 안에서 json-server 라이브러리를 설치해 `db.json`을 저장한 상태이다. 개발을 끝내고 'Netlify'를 통해 JSON server와 함께 React project를 배포할 예정이었지만, 'Netlify'에서는 JSON Server가 작동하지 않는다는 것을 깨달았다. JSON server와 함께 React project를 배포할 수 있는 다른 배포 사이트에 대해서 찾아보았고, 'Heroku'를 사용하면 가능하다는 게시글을 보았지만 2022년 말부터 유료화되었기 때문에 사용하지 못했다. 또 다른 배포 사이트를 찾아보다가 'Vercel'이라는 것을 알게 되었고, 여기에 JSON Server와 React Project를 각각 분리해서 배포한 후, React Project에서 JSON Server를 배포한 URL을 참조하면 되지 않을까 싶어 시도해 보았다.
+
+개발 시의 환경 변수 '.env.development'와 배포 시의 환경 변수 '.env.production'을 설정해준 후, menusApi.js에서 baseUrl을 설정해줄 때 'process.env.REACT_APP_API_URL'를 사용해 개발/배포 환경에 따라 다른 server url를 설정해주었다. vercel settings에서 environment variables에 'REACT_APP_API_URL'를 추가해주고 재배포한 결과 성공적으로 배포된 것을 확인할 수 있었다.
 
 -   참고: [JSON Server Doesn’t Work on Netlify](https://answers.netlify.com/t/json-server-doesnt-work-on-netlify/32351)
 -   참고: [How to Deploy a React Site with Vercel](https://vercel.com/guides/deploying-react-with-vercel)
